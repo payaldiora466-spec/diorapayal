@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LearnHub | Contact</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+          
+            background:#7AB2B2;
+
+        }
+
+        /* Navbar */
+        .navbar {
+            background:#162f58;
+            padding:20px 40px;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            color:#fff;
+        }
+         .navbar h2{
+            font-weight:600;
+        }
+        .navbar nav {
+            list-style: none;
+            display: flex;
+        }
+
+        .navbar nav a {
+             color:#fff;
+            text-decoration:none;
+            margin-left:25px;
+            font-weight:400;
+             position:relative;
+            padding:6px 2px;
+            transition:color 0.3s ease;
+        }
+        .navbar nav a:after{
+             content:"";
+             position:absolute;
+             left:0;
+             bottom:0;
+             width:0%;
+             height:2px;
+             background:#fff;
+             transition:width 0.3s ease;
+        }
+        .navbar nav a:hover{
+        text-decoration:underline;
+             color:#eaf6ff;
+        }
+         .navbar nav  a:hover::after{
+             width:100%;
+        }
+        .navbar nav a.active {
+            border-bottom: 2px solid rgb(40, 168, 253);
+        }
+
+        /* Contact Container */
+        .contact-container {
+            max-width: 1100px;
+            margin: 50px auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+            transition: 0.4s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 45px rgba(0,0,0,0.15);
+        }
+
+        .card h2 {
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .info-box {
+            background: #f4f7fb;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        .info-box strong {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        /* Form */
+        label {
+            font-size: 14px;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            outline: none;
+        }
+
+        textarea {
+            resize: none;
+            height: 100px;
+        }
+
+        /* Button */
+        button {
+            width: 100%;
+            padding: 12px;
+            background: #3498db;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.4s ease;
+        }
+
+        /* Button Hover Animation */
+        button:hover {
+            background: #1d6fa5;
+            box-shadow: 0 0 15px rgba(52,152,219,0.8);
+            transform: translateY(-2px);
+        }
+
+        /* Footer */
+      footer{
+            background:#2c3e50;
+            color:#fff;
+            text-align:center;
+            padding:20px;
+            margin-top:40px;
+            font-size:13px;
+        }
+
+        @media (max-width: 768px) {
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+     <nav class="navbar">
+        <h2>📘 LearnHub</h2>
+        <nav>
+        <a href="index.html">Home</a>
+        <a href="courses.html">Courses</a>
+        <a href="enroll.html">Enroll</a>
+        <a class="active" href="contact.html">Contact</a>
+        </nav>
+    </nav>
+
+    <!-- Contact Section -->
+    <section class="contact-container">
+
+        <!-- Get in Touch -->
+        <div class="card">
+            <h2>Get In Touch</h2>
+            <p>Have questions? We'd love to hear from you.</p>
+
+            <div class="info-box">
+                <strong>📧 Email</strong>
+                info@learnhub.com<br>
+                support@learnhub.com
+            </div>
+
+            <div class="info-box">
+                <strong>📞 Phone</strong>
+                +91 1234567890<br>
+                Mon–Fri, 10 AM – 6 PM
+            </div>
+
+            <div class="info-box">
+                <strong>📍 Address</strong>
+                123 Education Street<br>
+                Bangalore, Karnataka 560001
+            </div>
+
+            <div class="info-box">
+                <strong>⏰ Business Hours</strong>
+                Mon–Fri: 10 AM – 6 PM<br>
+                Sat: 10 AM – 4 PM
+            </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="card">
+            <h2>Send Us a Message</h2>
+
+            <label>Your Name</label>
+            <input type="text" placeholder="Enter your name">
+
+            <label>Your Email</label>
+            <input type="email" placeholder="Enter your email">
+
+            <label>Subject</label>
+            <select>
+                <option>Select a subject</option>
+                <option>Course Inquiry</option>
+                <option>Enrollment Help</option>
+                <option>Support</option>
+                <option>Feedback</option>
+            </select>
+
+            <label>Message</label>
+            <textarea placeholder="Write your message here..."></textarea>
+
+            <button>Send Message</button>
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 LearnHub. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

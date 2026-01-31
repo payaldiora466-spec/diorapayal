@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LearnHub | Enrollment</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+          
+            background:#7AB2B2;
+
+        }
+
+        /* Navbar */
+        .navbar {
+             background:#162f58;
+            padding:20px 40px;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            color:#fff;
+            
+        }
+         .navbar h2{
+            font-weight:600;
+        }
+        .navbar nav {
+            list-style: none;
+            display: flex;
+        }
+
+        .navbar nav a {
+             color:#fff;
+            text-decoration:none;
+            margin-left:25px;
+            font-weight:400;
+             position:relative;
+            padding:6px 2px;
+            transition:color 0.3s ease;
+        }
+        .navbar nav a:after{
+             content:"";
+             position:absolute;
+             left:0;
+             bottom:0;
+             width:0%;
+             height:2px;
+             background:#fff;
+             transition:width 0.3s ease;
+        }
+        .navbar nav a:hover{
+        text-decoration:underline;
+             color:#eaf6ff;
+        }
+         .navbar nav  a:hover::after{
+             width:100%;
+        }
+        .navbar nav a.active {
+            border-bottom: 2px solid rgb(40, 168, 253);
+        }
+
+
+        /* Enrollment Container */
+        .container {
+            max-width: 550px;
+            margin: 50px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+        }
+
+        .title {
+            background: #4aa3df;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 8px;
+            margin-bottom: 25px;
+        }
+
+        h3 {
+            margin: 20px 0 10px;
+            font-size: 16px;
+            color: #333;
+        }
+
+        label {
+            display: block;
+            font-size: 14px;
+            margin-bottom: 5px;
+            color: #555;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            outline: none;
+        }
+
+        textarea {
+            resize: none;
+            height: 80px;
+        }
+
+        .radio-group {
+            margin-bottom: 15px;
+        }
+
+        .radio-group input {
+            width: auto;
+            margin-right: 5px;
+        }
+
+        .terms {
+            font-size: 13px;
+            margin-bottom: 20px;
+        }
+
+        /* Button */
+        button {
+            width: 100%;
+            padding: 12px;
+            background: #3498db;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.4s ease;
+        }
+
+        /* Button Hover Animation */
+        button:hover {
+            background: #1d6fa5;
+            box-shadow: 0 0 15px rgba(52,152,219,0.8);
+            transform: translateY(-2px);
+        }
+
+        /* Footer */
+       footer{
+            background:#2c3e50;
+            color:#fff;
+            text-align:center;
+            padding:20px;
+            margin-top:40px;
+            font-size:13px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+   <nav class="navbar">
+        <h2>📘 LearnHub</h2>
+        <nav>
+        <a href="index.html">Home</a>
+        <a href="courses.html">Courses</a>
+        <a class="active" href="enroll.html">Enroll</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    </nav>
+
+    <!-- Enrollment Form -->
+    <div class="container">
+
+        <div class="title">
+            <h2>Course Enrollment</h2>
+            <p>Please fill in the form to enroll</p>
+        </div>
+
+        <h3>👤 Personal Information</h3>
+
+        <label>Full Name</label>
+        <input type="text" placeholder="Enter your full name">
+
+        <label>Email Address</label>
+        <input type="email" placeholder="Enter your email">
+
+        <label>Phone Number</label>
+        <input type="tel" placeholder="+91 1234567890">
+
+        <label>Date of Birth</label>
+        <input type="date">
+
+        <h3>🎓 Education Background</h3>
+
+        <label>Highest Qualification</label>
+        <select>
+            <option>Select your qualification</option>
+            <option>High School</option>
+            <option>Diploma</option>
+            <option>Bachelor's Degree</option>
+            <option>Master's Degree</option>
+        </select>
+
+        <label>Do you have programming experience?</label>
+        <div class="radio-group">
+            <input type="radio" name="exp"> Yes
+            <input type="radio" name="exp"> No
+        </div>
+
+        <h3>📚 Course Selection</h3>
+
+        <label>Select Course</label>
+        <select>
+            <option>Choose a course</option>
+            <option>Web Development</option>
+            <option>Python Programming</option>
+            <option>Data Science</option>
+            <option>UI/UX Design</option>
+            <option>Artificial Intelligence</option>
+        </select>
+
+        <label>Why do you want to take this course?</label>
+        <textarea placeholder="Tell us about your goals"></textarea>
+
+        <div class="terms">
+            <input type="checkbox"> I agree to the Terms & Conditions and Privacy Policy
+        </div>
+
+        <button>Complete Enrollment</button>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 LearnHub. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
