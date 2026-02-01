@@ -19,7 +19,7 @@
 
         /* Navbar */
         .navbar {
-             background:#162f58;
+            background:#162f58;
             padding:20px 40px;
             display:flex;
             justify-content:space-between;
@@ -32,7 +32,7 @@
         }
         .navbar nav {
             list-style: none;
-            display: flex;
+            display: flex;    
         }
 
         .navbar nav a {
@@ -43,6 +43,7 @@
              position:relative;
             padding:6px 2px;
             transition:color 0.3s ease;
+            
         }
         .navbar nav a:after{
              content:"";
@@ -69,19 +70,20 @@
         .header {
             background:linear-gradient(120deg,#1C4D8D,#4988C4);
              color:#fff;
-            padding:70px 0px;
+            padding:90px 30px;
             text-align:center;
             margin:0px;
             border-radius:0px;
-            /*padding:40px 20px;
-            display:flex;
-            justify-content:space-between;
-            align-items:center;
-            color:#fff;
-             text-align: center;*/
+           
         }
          .header h1{
-            font-weight:600;
+            font-weight:700;
+             font-size:36px;
+            margin-bottom:10px;
+        }
+         .header p{
+            font-size:20px;
+            margin-bottom:20px;
         }
 
         /* Courses Grid */
@@ -90,6 +92,7 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 25px;
+             flex-wrap:wrap;
         }
 
         /* Card */
@@ -119,19 +122,26 @@
         .card:hover .card-img {
             transform: scale(1.1);
         }
+    
 
         /* Gradient Images */
-        .web { background: linear-gradient(135deg, #6a5acd, #48c6ef); }
-        .python { background: linear-gradient(135deg, #ff7eb3, #ff758c); }
-        .data { background: linear-gradient(135deg, #43cea2, #185a9d); }
-        .mobile { background: linear-gradient(135deg, #f7971e, #ffd200); }
-        .uiux { background: linear-gradient(135deg, #36d1dc, #5b86e5); }
-        .ai { background: linear-gradient(135deg, #cfd9df, #e2ebf0); }
+        .web { background: linear-gradient(135deg, #6a5acd, #48c6ef);
+                font-size: 100px;}
+        .python { background: linear-gradient(135deg, #ff7eb3, #ff758c);
+             font-size: 100px; }
+        .data { background: linear-gradient(135deg, #43cea2, #185a9d); 
+              font-size: 100px;}
+        .mobile { background: linear-gradient(135deg, #f7971e, #ffd200); 
+             font-size: 100px;}
+        .uiux { background: linear-gradient(135deg, #36d1dc, #5b86e5); 
+            font-size: 100px;}
+        .ai { background: linear-gradient(135deg, #cfd9df, #e2ebf0);
+            font-size: 100px; }
 
         .card h3 {
             margin-bottom: 10px;
         }
-
+       
         .card p {
             font-size: 14px;
             color: #555;
@@ -204,7 +214,7 @@
     <section class="courses">
 
         <div class="card">
-            <div class="card-img web"></div>
+            <div class="card-img web"><center>💻</center></div>
             <h3>Complete Web Development</h3>
             <p>Learn HTML, CSS, JavaScript, and modern frameworks.</p>
             <div class="info">
@@ -215,7 +225,8 @@
         </div>
 
         <div class="card">
-            <div class="card-img python"></div>
+            <div class="card-img python"><center>🐍
+</center></div>
             <h3>Python Programming</h3>
             <p>Master Python from basics to advanced concepts.</p>
             <div class="info">
@@ -226,7 +237,7 @@
         </div>
 
         <div class="card">
-            <div class="card-img data"></div>
+            <div class="card-img data"><center>📊</center></div>
             <h3>Data Science Fundamentals</h3>
             <p>Data analysis, visualization, and ML basics.</p>
             <div class="info">
@@ -237,7 +248,7 @@
         </div>
 
         <div class="card">
-            <div class="card-img mobile"></div>
+            <div class="card-img mobile"><center>📱</center></div>
             <h3>Mobile App Development</h3>
             <p>Build Android & iOS apps using modern tools.</p>
             <div class="info">
@@ -248,7 +259,7 @@
         </div>
 
         <div class="card">
-            <div class="card-img uiux"></div>
+            <div class="card-img uiux"><center>🎨</center></div>
             <h3>UI/UX Design</h3>
             <p>Design beautiful and user-friendly interfaces.</p>
             <div class="info">
@@ -259,7 +270,7 @@
         </div>
 
         <div class="card">
-            <div class="card-img ai"></div>
+            <div class="card-img ai"><center>⬜</center></div>
             <h3>Artificial Intelligence Basics</h3>
             <p>Introduction to AI, ML, and neural networks.</p>
             <div class="info">
