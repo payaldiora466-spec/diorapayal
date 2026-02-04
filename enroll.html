@@ -3,6 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>LearnHub | Enrollment</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
 
     <style>
         * {
@@ -122,9 +127,16 @@
             margin-right: 5px;
         }
 
-        .terms {
+        .checkbox label{
             font-size: 13px;
-            margin-bottom: 20px;
+            margin-bottom:20px;
+            display:flex;
+            align-items:center;
+            gap:8px;
+            cursor
+        }
+        .checkbox input{
+            margin:0;
         }
        
 
@@ -157,6 +169,7 @@
             margin-top:40px;
             font-size:13px;
         }
+        
     </style>
 </head>
 
@@ -227,9 +240,10 @@
         <label>Why do you want to take this course?</label>
         <textarea placeholder="Tell us about your goals"></textarea>
 
-        <div class="terms">
-            <input type="checkbox"> I agree to the Terms & Conditions and Privacy Policy
-        </div>
+        <div class="checkbox">
+            <label>
+            <input type="checkbox" required> I agree to the Terms & Conditions and Privacy Policy
+       </label> </div>
 
         <button>Complete Enrollment</button>
     </div>
