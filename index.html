@@ -21,45 +21,54 @@
         }
 
         /* NAVBAR */
-        header{
+        .navbar {
             background:#162f58;
             padding:20px 40px;
             display:flex;
             justify-content:space-between;
             align-items:center;
             color:#fff;
+            
         }
-
-        header h2{
+        .navbar h2{
             font-weight:600;
         }
+        .navbar nav {
+            list-style: none;
+            display: flex;    
+        }
 
-        nav a{
-            color:#fff;
+        .navbar nav a {
+             color:#fff;
             text-decoration:none;
             margin-left:25px;
             font-weight:400;
              position:relative;
             padding:6px 2px;
             transition:color 0.3s ease;
+            
         }
-        nav a::after{
+        .navbar nav a:after{
              content:"";
              position:absolute;
+             left:0;
+             bottom:0;
+             width:0%;
              height:2px;
              background:#fff;
              transition:width 0.3s ease;
         }
-        nav a:hover{
-            text-decoration:underline;
+        .navbar nav a:hover{
+        text-decoration:underline;
              color:#eaf6ff;
         }
-        nav a:hover::after{
+         .navbar nav  a:hover::after{
              width:100%;
         }
-       .navbar nav a.active {
+         .navbar nav a.active {
             border-bottom: 2px solid rgb(40, 168, 253);
         }
+
         /* HERO */
         .hero{
             background:linear-gradient(120deg,#1C4D8D,#4988C4);
@@ -172,21 +181,21 @@
 <body>
 
 <!-- NAVBAR -->
-<header>
-    <h2>📘 LearnHub</h2>
-    <nav>
-        <a class="active"  href="index.html">Home</a>
+ <nav class="navbar">
+        <h2>📘 LearnHub</h2>
+        <nav>
+        <a class="active" href="index.html">Home</a>
         <a href="courses.html">Courses</a>
-        <a href="enroll.html">Enroll</a>
+        <a  href="enroll.html">Enroll</a>
         <a href="contact.html">Contact</a>
     </nav>
-</header>
+    </nav>
 
 <!-- HERO -->
 <section class="hero">
     <h1>Learn New Skills Online</h1>
     <p>Start your learning journey with our expert-led courses</p>
-    <button>Explore Courses</button>
+    <a href="courses.html"><button>Explore Courses</button></a>
 </section>
 
 <!-- WHY CHOOSE -->
