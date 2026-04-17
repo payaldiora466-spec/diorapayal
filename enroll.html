@@ -8,7 +8,6 @@
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
-
     <style>
         * {
             margin: 0;
@@ -18,61 +17,63 @@
         }
 
         body {
-          
             background:#7AB2B2;
-
         }
 
         /* Navbar */
         .navbar {
-             background:#162f58;
-            padding:20px 40px;
+            background:#162f58;
+            padding:10px;
             display:flex;
             justify-content:space-between;
             align-items:center;
             color:#fff;
-            
         }
-         .navbar h2{
+
+        .navbar h2{
             font-weight:600;
         }
+
         .navbar nav {
             list-style: none;
             display: flex;
         }
 
         .navbar nav a {
-             color:#fff;
+            color:#fff;
             text-decoration:none;
             margin-left:25px;
             font-weight:400;
-             position:relative;
+            position:relative;
             padding:6px 2px;
             transition:color 0.3s ease;
         }
+
         .navbar nav a:after{
-             content:"";
-             position:absolute;
-             left:0;
-             bottom:0;
-             width:0%;
-             height:2px;
-             background:#fff;
-             transition:width 0.3s ease;
+            content:"";
+            position:absolute;
+            left:0;
+            bottom:0;
+            width:0%;
+            height:2px;
+            background:#fff;
+            transition:width 0.3s ease;
         }
+
         .navbar nav a:hover{
-        text-decoration:underline;
-             color:#eaf6ff;
+            text-decoration:underline;
+            color:#eaf6ff;
         }
-         .navbar nav  a:hover::after{
-             width:100%;
+
+        .navbar nav a:hover::after{
+            width:100%;
         }
+
         .navbar nav a.active {
             border-bottom: 2px solid rgb(40, 168, 253);
         }
 
-
-        /* Enrollment Container */
+        /* Container */
         .container {
             max-width: 550px;
             margin: 50px auto;
@@ -104,7 +105,7 @@
             color: #555;
         }
 
-        input, select, textarea {
+        input,select, textarea {
             width: 100%;
             padding: 10px;
             margin-bottom: 15px;
@@ -127,18 +128,25 @@
             margin-right: 5px;
         }
 
-        .checkbox label{
+        /* ✅ FIXED CHECKBOX */
+        .checkbox {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+
+        .checkbox input {
+            width: auto;
+            margin: 0;
+            cursor: pointer;
+        }
+
+        .checkbox label {
             font-size: 13px;
-            margin-bottom:20px;
-            display:flex;
-            align-items:center;
-            gap:8px;
-            cursor
+            margin: 0;
+            cursor: pointer;
         }
-        .checkbox input{
-            margin:0;
-        }
-       
 
         /* Button */
         button {
@@ -153,7 +161,6 @@
             transition: all 0.4s ease;
         }
 
-        /* Button Hover Animation */
         button:hover {
             background:#30364F;
             box-shadow: 0 0 15px rgba(52,152,219,0.8);
@@ -161,7 +168,7 @@
         }
 
         /* Footer */
-       footer{
+        footer{
             background:#2c3e50;
             color:#fff;
             text-align:center;
@@ -169,89 +176,92 @@
             margin-top:40px;
             font-size:13px;
         }
-        
+
     </style>
 </head>
 
 <body>
 
-    <!-- Navbar -->
-   <nav class="navbar">
-        <h2>📘 LearnHub</h2>
-        <nav>
+<!-- Navbar -->
+<nav class="navbar">
+    <h2>📘 LearnHub</h2>
+    <nav>
         <a href="index.html">Home</a>
         <a href="courses.html">Courses</a>
         <a class="active" href="enroll.html">Enroll</a>
         <a href="contact.html">Contact</a>
     </nav>
-    </nav>
+</nav>
 
-    <!-- Enrollment Form -->
-    <div class="container">
+<!-- Enrollment Form -->
+<div class="container">
 
-        <div class="title">
-            <h2>Course Enrollment</h2>
-            <p>Please fill in the form to enroll</p>
-        </div>
-
-        <h3>👤 Personal Information</h3>
-
-        <label>Full Name</label>
-        <input type="text" placeholder="Enter your full name">
-
-        <label>Email Address</label>
-        <input type="email" placeholder="Enter your email">
-
-        <label>Phone Number</label>
-        <input type="tel" placeholder="+91 1234567890">
-
-        <label>Date of Birth</label>
-        <input type="date">
-
-        <h3>🎓 Education Background</h3>
-
-        <label>Highest Qualification</label>
-        <select>
-            <option>Select your qualification</option>
-            <option>High School</option>
-            <option>Diploma</option>
-            <option>Bachelor's Degree</option>
-            <option>Master's Degree</option>
-        </select>
-
-        <label>Do you have programming experience?</label>
-        <div class="radio-group">
-            <input type="radio" name="exp"> Yes
-            <input type="radio" name="exp"> No
-        </div>
-
-        <h3>📚 Course Selection</h3>
-
-        <label>Select Course</label>
-        <select>
-            <option>Choose a course</option>
-            <option>Web Development</option>
-            <option>Python Programming</option>
-            <option>Data Science</option>
-            <option>UI/UX Design</option>
-            <option>Artificial Intelligence</option>
-        </select>
-
-        <label>Why do you want to take this course?</label>
-        <textarea placeholder="Tell us about your goals"></textarea>
-
-        <div class="checkbox">
-            <label>
-            <input type="checkbox" required> I agree to the Terms & Conditions and Privacy Policy
-       </label> </div>
-
-        <button>Complete Enrollment</button>
+    <div class="title">
+        <h2>Course Enrollment</h2>
+        <p>Please fill in the form to enroll</p>
     </div>
 
-    <!-- Footer -->
-    <footer>
-        <p>© 2024 LearnHub. All rights reserved.</p>
-    </footer>
+    <h3>👤 Personal Information</h3>
+
+    <label>Full Name</label>
+    <input type="text" placeholder="Enter your full name">
+
+    <label>Email Address</label>
+    <input type="email" placeholder="Enter your email">
+
+    <label>Phone Number</label>
+    <input type="tel" placeholder="+91 1234567890">
+
+    <label>Date of Birth</label>
+    <input type="date">
+
+    <h3>🎓 Education Background</h3>
+
+    <label>Highest Qualification</label>
+    <select>
+        <option>Select your qualification</option>
+        <option>High School</option>
+        <option>Diploma</option>
+        <option>Bachelor's Degree</option>
+        <option>Master's Degree</option>
+    </select>
+
+    <label>Do you have programming experience?</label>
+    <div class="radio-group">
+        <input type="radio" name="exp"> Yes
+        <input type="radio" name="exp"> No
+    </div>
+
+    <h3>📚 Course Selection</h3>
+
+    <label>Select Course</label>
+    <select>
+        <option>Choose a course</option>
+        <option>Web Development</option>
+        <option>Python Programming</option>
+        <option>Data Science</option>
+        <option>UI/UX Design</option>
+        <option>Artificial Intelligence</option>
+    </select>
+
+    <label>Why do you want to take this course?</label>
+    <textarea placeholder="Tell us about your goals"></textarea>
+
+    <!-- ✅ Fixed Checkbox -->
+    <div class="checkbox">
+        <input type="checkbox" id="agree" required>
+        <label for="agree">
+            I agree to the Terms & Conditions and Privacy Policy
+        </label>
+    </div>
+    <a href="contact.html">
+    <button>Complete Enrollment</button></a>
+</div>
+
+<!-- Footer -->
+<footer>
+    <p>© 2024 LearnHub. All rights reserved.</p>
+</footer>
 
 </body>
 </html>
